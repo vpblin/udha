@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- The entitlements for a build with no signing team: identical to
+	     Udha.AIDesktop.entitlements except that `keychain-access-groups` is
+	     absent. That one entitlement needs a provisioning profile, so a clone
+	     with no DEVELOPMENT_TEAM cannot be signed with it at all — Xcode refuses
+	     the build outright rather than dropping it, which is why this second
+	     file exists instead of one shared file.
+
+	     Udha.xcconfig picks between the two on whether DEVELOPMENT_TEAM is set,
+	     so `git clone && xcodebuild` works with no account and a signing account
+	     changes nothing by hand.
+
+	     What is lost without it: KeychainStore's data-protection backend, which
+	     is access-group based. `KeychainBackend.supportsDataProtection` probes
+	     for it and falls back to the legacy file-based keychain, which authorises
+	     per item — so an unsigned build asks for the login password once per
+	     stored credential per launch. Everything works; it is just noisier. -->
+	<key>com.apple.security.app-sandbox</key>
+	<false/>
+	<key>com.apple.security.device.audio-input</key>
+	<true/>
+	<!-- Required for the video recorder's camera bubble. Needed even though the
+	     app sandbox is off: this bundle is signed with the Hardened Runtime
+	     (CodeDirectory flags=0x10000), and under that, camera access without
+	     this entitlement is refused outright — AVCaptureDevice.requestAccess
+	     returns false in milliseconds without ever showing a prompt, which
+	     reads exactly like the user having declined it. -->
+	<key>com.apple.security.device.camera</key>
+	<true/>
+	<!-- Same story for calendars under the Hardened Runtime: without this the
+	     EventKit request returns denied without a prompt. Read-only use. -->
+	<key>com.apple.security.personal-information.calendars</key>
+	<true/>
+	<key>com.apple.security.automation.apple-events</key>
+	<true/>
+	<key>com.apple.security.cs.allow-jit</key>
+	<true/>
+	<key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+	<true/>
+	<key>com.apple.security.cs.disable-library-validation</key>
+	<true/>
+</dict>
+</plist>

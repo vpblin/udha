@@ -1,0 +1,45 @@
+# Known false positives for scripts/release/audit.sh.
+#
+# One extended regex per line, matched against the whole `path:line:text`
+# output line. Blank lines and #-comments are ignored.
+#
+# Every entry needs a reason. An entry without one is a hole in the audit, so
+# keep each one as narrow as the thing it excuses — never a whole file, and
+# never a bare pattern name. Real hostnames, ids, keys and personal names get
+# fixed in the file; they are not excused here.
+#
+# (audit.sh and this file are not content-scanned at all — they are patterns
+# about patterns. See the comment above `SELF` in audit.sh.)
+
+# --- the release tooling describing itself -----------------------------------
+# .gitignore's and publish-public.sh's whole job is to name the directories
+# that must not ship, `xcuserdata` among them.
+^\.gitignore:[0-9]+:\*?\.?xcuserdata
+^scripts/release/publish-public\.sh:[0-9]+:.*xcuserdata
+
+# --- documented placeholders --------------------------------------------------
+# The APNs key lines in the relay's compose file and env example are the shape
+# of the setting with the value elided: literal X's for the key id, an elided
+# key body. Neither is a key.
+^relay/docker-compose\.yml:[0-9]+:.*AuthKey_XXXXXXXXXX\.p8
+^relay/\.env\.example:[0-9]+:#.*BEGIN PRIVATE KEY-----\\nMIGT\.\.\.
+
+# --- fabricated examples in docs and tests ------------------------------------
+# relay/README.md quotes sample log output. 10.0.0.7 / 10.0.0.9 are invented
+# addresses in an invented session, beside you@example.com and relay.example.com.
+^relay/README\.md:[0-9]+:.*10\.0\.0\.[0-9]+ \(user: you@example\.com
+^relay/README\.md:[0-9]+:.*INVALID_TOKEN from 10\.0\.0\.[0-9]+
+
+# tests/main.swift builds its fixtures out of invented paths: /Users/dev/... and
+# /home/b/... are test data, not anybody's home directory.
+^tests/main\.swift:[0-9]+:.*/Users/dev/
+^tests/main\.swift:[0-9]+:.*/home/b/
+
+# ClaudeStatusSidecar quotes the shell error an unquoted hook path produces;
+# `/Users/you/` is the placeholder inside that quoted message. Two paths,
+# because the agent's copy is a symlink to the app's file.
+^(udha-agent/Sources/udha-agent/Shared|Udha\.AIDesktop/Sessions)/ClaudeStatusSidecar\.swift:[0-9]+:.*/Users/you/Library
+
+# MachineMonitor's doc comments show the shape of `tailscale status`/`ping`
+# output; 192.168.1.20 and 100.64.0.2 are illustrative addresses in them.
+^Udha\.AIDesktop/Machines/MachineMonitor\.swift:[0-9]+:.*(192\.168\.1\.20|100\.64\.0\.2)

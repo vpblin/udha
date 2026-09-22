@@ -1,0 +1,22 @@
+# systemd --user unit for udha-agent. Install with udha-agent/install.sh.
+[Unit]
+Description=Udha agent — supervises tmux/Claude sessions for the Udha mobile app
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/udha-agent run
+Restart=always
+# Only kill the agent process on stop/restart — never the tmux server (and the
+# Claude sessions) it spawned; those must outlive an agent restart.
+KillMode=process
+RestartSec=5
+# claude/tmux live in the user's PATH, not systemd's minimal one.
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+Environment=LANG=C.UTF-8
+# Anything the agent spawns must be able to find the user's tmux server.
+Environment=TMUX_TMPDIR=/tmp
+
+[Install]
+WantedBy=default.target

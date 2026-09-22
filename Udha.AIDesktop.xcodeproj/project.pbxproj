@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38ADA9010000000000000001 /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 38ADA9010000000000000002 /* SwiftTerm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38ADA8862F915C4600CB748D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38ADA8702F915C4400CB748D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38ADA8772F915C4400CB748D;
+			remoteInfo = Udha.AIDesktop;
+		};
+		38ADA8902F915C4600CB748D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38ADA8702F915C4400CB748D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38ADA8772F915C4400CB748D;
+			remoteInfo = Udha.AIDesktop;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		38ADA8782F915C4400CB748D /* Udha.AIDesktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Udha.AIDesktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38ADA8852F915C4600CB748D /* Udha.AIDesktopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Udha.AIDesktopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38ADA88F2F915C4600CB748D /* Udha.AIDesktopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Udha.AIDesktopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38ADA8C02F915C4700CB748D /* Udha.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Udha.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		38ADA87A2F915C4400CB748D /* Udha.AIDesktop */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Udha.AIDesktop;
+			sourceTree = "<group>";
+		};
+		38ADA8882F915C4600CB748D /* Udha.AIDesktopTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Udha.AIDesktopTests;
+			sourceTree = "<group>";
+		};
+		38ADA8922F915C4600CB748D /* Udha.AIDesktopUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Udha.AIDesktopUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38ADA8752F915C4400CB748D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38ADA9010000000000000001 /* SwiftTerm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38ADA8822F915C4600CB748D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38ADA88C2F915C4600CB748D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38ADA86F2F915C4400CB748D = {
+			isa = PBXGroup;
+			children = (
+				38ADA8C02F915C4700CB748D /* Udha.xcconfig */,
+				38ADA87A2F915C4400CB748D /* Udha.AIDesktop */,
+				38ADA8882F915C4600CB748D /* Udha.AIDesktopTests */,
+				38ADA8922F915C4600CB748D /* Udha.AIDesktopUITests */,
+				38ADA8792F915C4400CB748D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38ADA8792F915C4400CB748D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38ADA8782F915C4400CB748D /* Udha.AIDesktop.app */,
+				38ADA8852F915C4600CB748D /* Udha.AIDesktopTests.xctest */,
+				38ADA88F2F915C4600CB748D /* Udha.AIDesktopUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38ADA8772F915C4400CB748D /* Udha.AIDesktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38ADA8992F915C4600CB748D /* Build configuration list for PBXNativeTarget "Udha.AIDesktop" */;
+			buildPhases = (
+				38ADA8742F915C4400CB748D /* Sources */,
+				38ADA8752F915C4400CB748D /* Frameworks */,
+				38ADA8762F915C4400CB748D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				38ADA87A2F915C4400CB748D /* Udha.AIDesktop */,
+			);
+			name = Udha.AIDesktop;
+			packageProductDependencies = (
+				38ADA9010000000000000002 /* SwiftTerm */,
+			);
+			productName = Udha.AIDesktop;
+			productReference = 38ADA8782F915C4400CB748D /* Udha.AIDesktop.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38ADA8842F915C4600CB748D /* Udha.AIDesktopTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38ADA89C2F915C4600CB748D /* Build configuration list for PBXNativeTarget "Udha.AIDesktopTests" */;
+			buildPhases = (
+				38ADA8812F915C4600CB748D /* Sources */,
+				38ADA8822F915C4600CB748D /* Frameworks */,
+				38ADA8832F915C4600CB748D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38ADA8872F915C4600CB748D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				38ADA8882F915C4600CB748D /* Udha.AIDesktopTests */,
+			);
+			name = Udha.AIDesktopTests;
+			packageProductDependencies = (
+			);
+			productName = Udha.AIDesktopTests;
+			productReference = 38ADA8852F915C4600CB748D /* Udha.AIDesktopTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		38ADA88E2F915C4600CB748D /* Udha.AIDesktopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38ADA89F2F915C4600CB748D /* Build configuration list for PBXNativeTarget "Udha.AIDesktopUITests" */;
+			buildPhases = (
+				38ADA88B2F915C4600CB748D /* Sources */,
+				38ADA88C2F915C4600CB748D /* Frameworks */,
+				38ADA88D2F915C4600CB748D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38ADA8912F915C4600CB748D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				38ADA8922F915C4600CB748D /* Udha.AIDesktopUITests */,
+			);
+			name = Udha.AIDesktopUITests;
+			packageProductDependencies = (
+			);
+			productName = Udha.AIDesktopUITests;
+			productReference = 38ADA88F2F915C4600CB748D /* Udha.AIDesktopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38ADA8702F915C4400CB748D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2610;
+				LastUpgradeCheck = 2610;
+				TargetAttributes = {
+					38ADA8772F915C4400CB748D = {
+						CreatedOnToolsVersion = 26.1.1;
+					};
+					38ADA8842F915C4600CB748D = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 38ADA8772F915C4400CB748D;
+					};
+					38ADA88E2F915C4600CB748D = {
+						CreatedOnToolsVersion = 26.1.1;
+						TestTargetID = 38ADA8772F915C4400CB748D;
+					};
+				};
+			};
+			buildConfigurationList = 38ADA8732F915C4400CB748D /* Build configuration list for PBXProject "Udha.AIDesktop" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38ADA86F2F915C4400CB748D;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				38ADA9010000000000000003 /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 38ADA8792F915C4400CB748D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38ADA8772F915C4400CB748D /* Udha.AIDesktop */,
+				38ADA8842F915C4600CB748D /* Udha.AIDesktopTests */,
+				38ADA88E2F915C4600CB748D /* Udha.AIDesktopUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38ADA8762F915C4400CB748D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38ADA8832F915C4600CB748D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38ADA88D2F915C4600CB748D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38ADA8742F915C4400CB748D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38ADA8812F915C4600CB748D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38ADA88B2F915C4600CB748D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38ADA8872F915C4600CB748D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38ADA8772F915C4400CB748D /* Udha.AIDesktop */;
+			targetProxy = 38ADA8862F915C4600CB748D /* PBXContainerItemProxy */;
+		};
+		38ADA8912F915C4600CB748D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38ADA8772F915C4400CB748D /* Udha.AIDesktop */;
+			targetProxy = 38ADA8902F915C4600CB748D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		38ADA8972F915C4600CB748D /* Debug */ = {
+			baseConfigurationReference = 38ADA8C02F915C4700CB748D /* Udha.xcconfig */;
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38ADA8982F915C4600CB748D /* Release */ = {
+			baseConfigurationReference = 38ADA8C02F915C4700CB748D /* Udha.xcconfig */;
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		38ADA89A2F915C4600CB748D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "$(UDHA_ENTITLEMENTS)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Udha.AI controls Terminal to open and focus the tmux windows your Claude Code sessions run in.";
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Udha.AI listens when you hold the push-to-talk hotkey, and records your side of meetings you choose to record.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Udha.AI records your camera as the picture-in-picture bubble in video demos you choose to record.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UDHA_BUNDLE_ID)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		38ADA89B2F915C4600CB748D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "$(UDHA_ENTITLEMENTS)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SELECTED_FILES = readwrite;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = NO;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "Udha.AI controls Terminal to open and focus the tmux windows your Claude Code sessions run in.";
+				INFOPLIST_FILE = Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Udha.AI listens when you hold the push-to-talk hotkey, and records your side of meetings you choose to record.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Udha.AI records your camera as the picture-in-picture bubble in video demos you choose to record.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UDHA_BUNDLE_ID)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		38ADA89D2F915C4600CB748D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UDHA_BUNDLE_ID).tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Udha.AIDesktop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Udha.AIDesktop";
+			};
+			name = Debug;
+		};
+		38ADA89E2F915C4600CB748D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UDHA_BUNDLE_ID).tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Udha.AIDesktop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Udha.AIDesktop";
+			};
+			name = Release;
+		};
+		38ADA8A02F915C4600CB748D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UDHA_BUNDLE_ID).uitests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Udha.AIDesktop;
+			};
+			name = Debug;
+		};
+		38ADA8A12F915C4600CB748D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "$(UDHA_BUNDLE_ID).uitests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Udha.AIDesktop;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38ADA8732F915C4400CB748D /* Build configuration list for PBXProject "Udha.AIDesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38ADA8972F915C4600CB748D /* Debug */,
+				38ADA8982F915C4600CB748D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38ADA8992F915C4600CB748D /* Build configuration list for PBXNativeTarget "Udha.AIDesktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38ADA89A2F915C4600CB748D /* Debug */,
+				38ADA89B2F915C4600CB748D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38ADA89C2F915C4600CB748D /* Build configuration list for PBXNativeTarget "Udha.AIDesktopTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38ADA89D2F915C4600CB748D /* Debug */,
+				38ADA89E2F915C4600CB748D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38ADA89F2F915C4600CB748D /* Build configuration list for PBXNativeTarget "Udha.AIDesktopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38ADA8A02F915C4600CB748D /* Debug */,
+				38ADA8A12F915C4600CB748D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38ADA9010000000000000003 /* XCRemoteSwiftPackageReference "SwiftTerm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/migueldeicaza/SwiftTerm.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.20.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38ADA9010000000000000002 /* SwiftTerm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38ADA9010000000000000003 /* XCRemoteSwiftPackageReference "SwiftTerm" */;
+			productName = SwiftTerm;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 38ADA8702F915C4400CB748D /* Project object */;
+}

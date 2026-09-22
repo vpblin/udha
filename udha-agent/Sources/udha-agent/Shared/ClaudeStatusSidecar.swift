@@ -1,0 +1,1 @@
+../../../../Udha.AIDesktop/Sessions/ClaudeStatusSidecar.swift

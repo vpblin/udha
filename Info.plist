@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>NSCalendarsFullAccessUsageDescription</key>
+	<string>Udha.AI reads your calendar to name each recorded meeting after the event it belongs to and to know who was invited. Nothing is written.</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Udha.AI reads your calendar to name each recorded meeting after the event it belongs to and to know who was invited. Nothing is written.</string>
+	<key>NSAudioCaptureUsageDescription</key>
+	<string>Udha.AI records system audio during meetings so what other participants say can be transcribed.</string>
+	<key>NSScreenCaptureUsageDescription</key>
+	<string>Udha.AI records your screen to make the video demos you share.</string>
+</dict>
+</plist>

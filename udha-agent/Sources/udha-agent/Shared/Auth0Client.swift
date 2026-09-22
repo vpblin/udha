@@ -1,0 +1,1 @@
+../../../../Udha.AIDesktop/Bridge/Auth0Client.swift
