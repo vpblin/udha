@@ -1,0 +1,40 @@
+// Build settings that identify *your* build of Udha. Nothing here is secret,
+// but nothing here should be another person's either.
+//
+// Override any of these by creating Local.xcconfig next to this file (it is
+// git-ignored), e.g.
+//   UDHA_BUNDLE_ID = com.yourname.udha
+//   DEVELOPMENT_TEAM = ABCDE12345
+// With no team set, Xcode signs to run locally, which is all a Debug build
+// needs. A real team is required for the Keychain data-protection path and
+// for distributing the app.
+
+UDHA_BUNDLE_ID = ai.udha.desktop
+DEVELOPMENT_TEAM =
+
+// --- Entitlements: chosen by whether there is a signing team -----------------
+//
+// `keychain-access-groups` requires a provisioning profile. With no team there
+// is no profile, and Xcode does not quietly drop the entitlement — it refuses
+// the whole build ("has entitlements that require signing with a development
+// certificate"). So a clone with no Apple account could not build at all.
+//
+// Two entitlement files, then, picked here rather than by hand:
+//   * Udha.AIDesktop.entitlements        — the full set, needs a team
+//   * Udha.AIDesktop-local.entitlements  — the same minus keychain-access-groups
+//
+// The selection is a composed variable name: UDHA_TEAM_TAG is the team id, or
+// the literal NOTEAM when DEVELOPMENT_TEAM is empty, so UDHA_ENT_$(...) resolves
+// to UDHA_ENT_NOTEAM for an unsigned build and to nothing — hence the default —
+// for any real team. Setting DEVELOPMENT_TEAM in Local.xcconfig is enough;
+// nothing else has to change.
+//
+// What an unsigned build loses: `KeychainBackend.supportsDataProtection` probes
+// for the access-group keychain and falls back to the legacy per-item one, so
+// macOS asks for the login password once per stored credential per launch.
+UDHA_TEAM_TAG = $(DEVELOPMENT_TEAM:default=NOTEAM)
+UDHA_ENT_NOTEAM = Udha.AIDesktop/Udha.AIDesktop-local.entitlements
+UDHA_ENT_DEFAULT = Udha.AIDesktop/Udha.AIDesktop.entitlements
+UDHA_ENTITLEMENTS = $(UDHA_ENT_$(UDHA_TEAM_TAG):default=$(UDHA_ENT_DEFAULT))
+
+#include? "Local.xcconfig"

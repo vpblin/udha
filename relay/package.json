@@ -1,0 +1,19 @@
+{
+  "name": "udha-relay",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Self-hostable WebSocket relay that connects Udha hosts (the macOS app, udha-agent) to clients (the iPad app, another desktop).",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node tests/run.js"
+  },
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "jwks-rsa": "^3.1.0",
+    "ws": "^8.18.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

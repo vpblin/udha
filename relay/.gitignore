@@ -1,0 +1,17 @@
+node_modules/
+
+# Never commit a deployment's own configuration or its APNs signing key.
+.env
+.env.*
+!.env.example
+*.p8
+*.pem
+*.key
+
+# Runtime state (paired instances)
+data/
+paired-instances.json
+
+*.log
+npm-debug.log*
+.DS_Store

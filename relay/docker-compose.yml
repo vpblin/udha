@@ -1,0 +1,47 @@
+# Udha relay — one service, configuration from .env, comes back after a reboot.
+#
+#   cp .env.example .env && $EDITOR .env
+#   docker compose up -d
+#   curl -fsS http://localhost:8080/health
+#
+# This publishes plain ws:// on the host. Put a TLS terminator (Caddy, nginx)
+# in front of it before anything dials in from outside the machine — the apps
+# only speak wss://. See README.md → "Behind TLS".
+
+services:
+  relay:
+    build: .
+    image: udha-relay:latest
+    container_name: udha-relay
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      # Bind to localhost only when a reverse proxy on the same host will be
+      # the thing facing the internet: "127.0.0.1:8080:8080".
+      - "${PUBLISH_ADDRESS:-0.0.0.0}:${PUBLISH_PORT:-8080}:8080"
+    volumes:
+      # Paired instances survive restarts and image rebuilds.
+      - relay-data:/data
+      # An APNs signing key, if you enable push. Keep it read-only and set
+      # APNS_KEY_PATH=/run/secrets/apns.p8 in .env.
+      # - ./AuthKey_XXXXXXXXXX.p8:/run/secrets/apns.p8:ro
+    environment:
+      # The container always listens on 8080 internally; PUBLISH_PORT above is
+      # what the host exposes.
+      PORT: "8080"
+      DATA_DIR: /data
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/health"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "5"
+
+volumes:
+  relay-data:
