@@ -4,6 +4,15 @@ A native Windows build of Udha's session board: no WSL, no tmux. The session
 logic and the design follow the mac app at the repo root (`SessionManager`,
 `ClaudeStatusSidecar`, `SessionStatusPresentation`, `UdhaTheme`).
 
+![Udha for Windows — session board, light](docs/udha-windows-light.png)
+
+![Udha for Windows — session board, dark](docs/udha-windows-dark.png)
+
+<img src="docs/udha-windows-overlay-panel.png" width="340" alt="The edge overlay, bloomed on hover">
+
+*Screenshots use demo projects. The edge overlay (last image) is a hairline strip on the screen's right edge that
+blooms into this panel on hover.*
+
 **Current version: 0.2.0** (git tag `v0.2.0`). See [Status](#status) for
 what's done and what's left.
 

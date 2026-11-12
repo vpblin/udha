@@ -186,6 +186,8 @@ other tools, no LLM in the status path) and the same design tokens, and keeps ev
 `%APPDATA%\Udha`. It does not connect to the relay yet. Build, status and what's left are in
 **[windows/README.md](windows/README.md)**:
 
+![Udha for Windows](windows/docs/udha-windows-dark.png)
+
 ```powershell
 cd windows
 npm install
