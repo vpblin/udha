@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-dark="1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <title>Udha — locked</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: radial-gradient(1200px 700px at 50% 30%, #1d2230, #0b0b0d); color: #f5f5f7; height: 100vh; display: flex; align-items: center; justify-content: center; cursor: default; }
+    .lockbox { width: min(520px, 90vw); display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+    .clock { font-size: 72px; font-weight: 300; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; }
+    .sub { color: #a6a6ac; font-size: 13px; margin-top: -10px; }
+    .lockicon { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; }
+    .pin { display: flex; gap: 8px; }
+    .pin input { width: 220px; height: 40px; text-align: center; font-size: 20px; letter-spacing: .4em; border: 0; border-radius: 10px; background: rgba(255,255,255,0.10); color: #fff; outline: none; }
+    .pin input:focus { box-shadow: 0 0 0 2px #4DA2FF; }
+    .msg { min-height: 18px; font-size: 12px; color: #FF9A94; }
+    .sessions { width: 100%; display: flex; flex-direction: column; gap: 5px; max-height: 40vh; overflow: hidden; }
+    .srow { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 8px; background: rgba(255,255,255,0.06); font-size: 12.5px; }
+    .srow .n { flex: 1; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .shake { animation: shake .3s; }
+    @keyframes shake { 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
+  </style>
+</head>
+<body>
+  <div class="lockbox">
+    <div class="lockicon"><svg viewBox="0 0 16 16" width="20" height="20"><rect x="3" y="7" width="10" height="7" rx="1.6" fill="none" stroke="#f5f5f7" stroke-width="1.4"/><path d="M5.2 7V5.2a2.8 2.8 0 0 1 5.6 0V7" fill="none" stroke="#f5f5f7" stroke-width="1.4"/></svg></div>
+    <div class="clock" id="clock"></div>
+    <div class="sub">Input is locked · your sessions keep running</div>
+    <div class="pin" id="pinRow"><input id="pin" type="password" inputmode="numeric" maxlength="12" placeholder="PIN" autofocus></div>
+    <div class="msg" id="msg"></div>
+    <div class="sessions" id="sessions"></div>
+  </div>
+  <script src="presentation.js"></script>
+  <script src="lock.js"></script>
+</body>
+</html>

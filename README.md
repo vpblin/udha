@@ -178,6 +178,22 @@ requirement, optional GPU services, and the first-run trust prompts that otherwi
 
 ---
 
+## Windows (`windows/`)
+
+`windows/` is a native Windows build of the session board — Electron and ConPTY instead of SwiftUI and tmux, no
+WSL. It follows the same session logic (Claude hooks and statusLine for status, rule-based screen reading for
+other tools, no LLM in the status path) and the same design tokens, and keeps everything locally in
+`%APPDATA%\Udha`. It does not connect to the relay yet. Build, status and what's left are in
+**[windows/README.md](windows/README.md)**:
+
+```powershell
+cd windows
+npm install
+npm start          # or: npm run dist → an NSIS installer
+```
+
+---
+
 ## Configuration and secrets
 
 - Config: `~/Library/Application Support/Udha.AI/config.json`. Loaded tolerantly — the file on disk is merged
